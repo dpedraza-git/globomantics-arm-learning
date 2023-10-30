@@ -30,10 +30,10 @@
         "tags": {
             "displayName": "[parameters('storageAccountName')]"
         },
-        "location": "[parameters("location")]",
+        "location": "[parameters('location')]",
         "kind": "StorageV2",
         "sku": {
-            "name": "[parameters("sku")]",
+            "name": "[parameters('sku')]",
             "tier": "Premium"
         }
     }],
