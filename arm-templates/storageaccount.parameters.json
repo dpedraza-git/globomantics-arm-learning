@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {
-            "value": "globostg001" // TODO: Fill in parameter value
+            "value": "globostg001er45" // TODO: Fill in parameter value
         },
         "location": {
             "value": "eastus" // TODO: Fill in parameter value
