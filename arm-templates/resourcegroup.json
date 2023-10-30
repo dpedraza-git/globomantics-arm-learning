@@ -4,9 +4,9 @@
     "parameters": {"location": {
         "type": "string",
         "metadata": {
-            "description": "Enter the locstion to deploy this resource to"
+            "description": "Enter the location to deploy this resource to"
         },
-        "defautValue": "eastus"
+        "defaultValue": "eastus"
     },
     "resourceGroupName": {
         "type": "string",
