@@ -47,6 +47,6 @@ jobs:
             location="west us"
           deploymentMode: incremental
 
-          run: echo ${{steps.storageAccountDeploy.outputs.BlobUri}}
+      - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri }}
       
   
