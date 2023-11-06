@@ -55,7 +55,7 @@ jobs:
             subscriptionId: e693c25d-601a-4c2c-b613-2c26a18f489b
             template: ./arm-templates/virtualmachine.json
             parameters: 
-              adminpassword="My$ecurePassw@rd!"
+              adminPassword="My$ecurePassw@rd!"
             deploymentMode: incremental
 
       
