@@ -11,7 +11,7 @@ on:
 
 env:
   resource_group_name: rg-githubactions
-  location: "East US"
+  location: "eastus"
   subscriptionId: e693c25d-601a-4c2c-b613-2c26a18f489b
 jobs:
   ArmDeploy:
