@@ -30,6 +30,7 @@ jobs:
         with:
           scope: subscription
           subscriptionId: ${{ env.subscriptionId }}
+          region: eastus
           template: ./arm-templates/resourcegroup.json
           parameters:
             location=${{ env.location }}
