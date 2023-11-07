@@ -7,6 +7,12 @@
             "metadata": {
                 "description": "Enter the password for the admin account for this vm"
             }
+        },
+        "location": {
+            "type": "string",
+            "metadata": {
+                "description": "Enter the location to deploy the resource to"
+            }
         }
     },
     "functions": [],
@@ -16,7 +22,7 @@
             "name": "windowsVM1-nsg",
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2023-04-01",
-            "location": "[resourceGroup().location]",
+            "location": "[parameters('location')]",
             "properties": {
                 "securityRules": [
                     {
@@ -40,7 +46,7 @@
             "name": "windowsVM1-VirtualNetwork",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2023-04-01",
-            "location": "[resourceGroup().location]",
+            "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkSecurityGroups', 'windowsVM1-nsg')]"
             ],
@@ -70,7 +76,7 @@
             "name": "windowsVM1-NetworkInterface",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-04-01",
-            "location": "[resourceGroup().location]",
+            "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks', 'windowsVM1-VirtualNetwork')]"
             ],
@@ -95,7 +101,7 @@
             "name": "windowsVM1",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
-            "location": "[resourceGroup().location]",
+            "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', 'windowsVM1-NetworkInterface')]"
             ],
